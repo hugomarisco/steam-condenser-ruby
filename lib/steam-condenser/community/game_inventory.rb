@@ -14,11 +14,10 @@ module SteamCondenser::Community
   end
 end
 
-require 'steam-condenser/community/dota2/dota2_test_inventory'
 require 'steam-condenser/community/dota2/dota2_inventory'
 require 'steam-condenser/community/portal2/portal2_inventory'
-require 'steam-condenser/community/tf2/tf2_beta_inventory'
 require 'steam-condenser/community/tf2/tf2_inventory'
+require 'steam-condenser/community/csgo/csgo_inventory'
 
 module SteamCondenser::Community
 

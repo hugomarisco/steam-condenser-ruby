@@ -4,21 +4,20 @@
 # Copyright (c) 2011-2014, Sebastian Staudt
 
 require 'steam-condenser/community/game_inventory'
-require 'steam-condenser/community/tf2/tf2_item'
+require 'steam-condenser/community/csgo/csgo_item'
 
 module SteamCondenser::Community
 
-  # Represents the inventory (aka. Backpack) of a player of the public Team
-  # Fortress 2 beta
+  # Represents the inventory (a.k.a. Robot Enrichment) of a Portal 2 player
   #
   # @author Sebastian Staudt
-  class TF2BetaInventory < GameInventory
+  class Portal2Inventory < GameInventory
 
-    # The Steam application ID of the Team Fortress 2 beta
-    APP_ID = 520
+    # The Steam application ID of Portal 2
+    APP_ID = 730
 
-    # Creates a new inventory object for the given SteamID64 in the Team Fortress
-    # 2 beta (App ID 520)
+    # Creates a new inventory object for the given SteamID64 in CS GO (App ID
+    # 730)
     #
     # @param [Fixnum] steam_id64 The 64bit SteamID of the player to get the
     #        inventory for
@@ -27,7 +26,8 @@ module SteamCondenser::Community
       super APP_ID, steam_id64
     end
 
-    @item_class = TF2Item
+    # The class representing Portal 2 items
+    @item_class = CSGOItem
 
   end
 end
